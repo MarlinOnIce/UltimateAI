@@ -31,7 +31,7 @@ def get_percentage(state, state_dict2):
 
 def small_win_probability(state, state_dict2):
     if state_dict2 is None:
-        print("WTFTFTFTFTFTFT")  # or handle the error appropriately
+        print("Dies sollte nicht passieren.")
         state_dict2 = state
     current_state = copy.deepcopy(state)
     b2h = board2hash
