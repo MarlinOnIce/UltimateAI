@@ -639,7 +639,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, exp = False)
         move= best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "MCTS AI1": #MCTS mit berechneten Zügen
@@ -647,7 +647,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, exp=False)
         move = best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "MCTS AI2": #MCTS mit berechneten Zügen, Nutzen der Startsymmetrie, LCB-Auswahl und Merken der History
@@ -655,7 +655,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, lcb=True,exp=False)
         move = best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "MCTS AI3":
@@ -663,7 +663,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, lcb=True,exp=False)
         move = best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "MCTS AI4":
@@ -671,7 +671,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, lcb=False,exp=False)
         move = best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "MCTS AI5":
@@ -679,7 +679,7 @@ def select_move(state, strategy, state_dictionary, simulation_count, gui=None): 
         best_node = root_node.best_action(simulation_count, lcb=True,exp=True)
         move = best_node.parent_action
         if move is None:
-            print("No move found,WTF")
+            print("No move found")
             move = random.choice(state.get_possible_moves())
         return move
     elif strategy == "HEURISTICa2":
